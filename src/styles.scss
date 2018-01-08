@@ -1,0 +1,23 @@
+.sci-react-checkbox {
+    > .content {
+        display: flex;
+        align-items: center;
+
+        position: relative; // For the actual checkbox to be semi hidden
+        
+        > .visual {
+        }
+
+        > .data {
+            visibility: hidden;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 1px; // Some browsers will not render elements with no width or height
+            width: 1px; // Some browsers will not render elements with no width or height
+        }
+
+        > .text {
+        }
+    }
+}
