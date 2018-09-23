@@ -69,7 +69,7 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxState> {
                         role={role || "checkbox"}
                         aria-checked={this.props["aria-checked"] || checked || this.state.isChecked}
                         {...otherButtonProps}
-                        type="button"
+                        type={undefined}
                         value={undefined}>
                         {checkboxContent}
                     </UnstyledButton>

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 import { Checkbox, ICheckboxProps } from "./component";
 
@@ -180,5 +179,12 @@ describe("Checkbox", () => {
             expect(wrapper.find(".text").length).to.equal(1);
             expect(wrapper.find(".text").text()).to.equal(defaultProps.labelText);
         });
+    });
+
+    it("Sets button type to undefined even if passed in a type", () => {
+        defaultProps.type = "button";
+        let wrapper = shallow(<Checkbox {...defaultProps} />);
+        let visual = wrapper.find(".visual");
+        expect(visual.props().type).to.be.undefined;
     });
 });
