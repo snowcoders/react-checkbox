@@ -6,9 +6,7 @@ import { UnstyledButton } from "@snowcoders/react-unstyled-button";
 // Utilities
 import * as classNames from "classnames";
 
-export interface ICheckboxProps {
-    /** A classname to apply to the root element */
-    className?: string;
+export interface ICheckboxProps extends React.ButtonHTMLAttributes<HTMLElement | HTMLInputElement> {
     /** If the base styles provided in styles.scss are applied or not */
     isBaseStylesDisabled?: boolean;
     /** The text that appears next to the checkbox */
@@ -47,9 +45,13 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxState> {
             isBaseStylesDisabled,
             className,
             labelText,
+            disabled,
             checked,
             defaultChecked,
-            checkboxContent } = this.props;
+            checkboxContent,
+            onChange,
+            role,
+            ...otherButtonProps } = this.props;
 
         // Figure out the base classname to be applied
         className = classNames(
@@ -62,12 +64,19 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxState> {
                 <label className="content">
                     <UnstyledButton
                         className="visual"
-                        onClick={this.onButtonClick}>
+                        disabled={disabled}
+                        onClick={this.onButtonClick}
+                        role={role || "checkbox"}
+                        aria-checked={this.props["aria-checked"] || checked || this.state.isChecked}
+                        {...otherButtonProps}
+                        type={undefined}
+                        value={undefined}>
                         {checkboxContent}
                     </UnstyledButton>
                     <input
                         checked={checked}
                         className="data"
+                        disabled={disabled}
                         defaultChecked={defaultChecked}
                         onChange={this.onInputChange}
                         ref={this.setInputRef}
