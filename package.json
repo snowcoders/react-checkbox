@@ -1,11 +1,13 @@
 {
   "name": "@snowcoders/react-checkbox",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "keywords": [
     "Unstyled",
     "Base",
     "Checkbox"
   ],
+  "author": "Snowcoders",
+  "license": "MIT",
   "private": false,
   "repository": "https://github.com/snowcoders/react-checkbox",
   "main": "dist/component.js",
@@ -15,17 +17,30 @@
     "build-scss": "node-sass src/styles.scss dist/styles.css",
     "build-typescript": "tsc",
     "clean": "rimraf coverage dist",
+    "precommit": "lint-staged",
     "prepare": "npm run clean && npm run build",
     "test": "npm run karma",
     "karma": "karma start ./karma.conf.js"
   },
-  "author": "Snowcoders",
-  "license": "MIT",
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "@snowcoders/react-unstyled-button": "~1.1.5"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "sortier",
+      "git add"
+    ]
   },
   "peerDependencies": {
+    "classnames": ">=2.2.5",
+    "@snowcoders/react-unstyled-button": ">=1.1.5",
     "react": "^15.0.0 || ^16.0.0",
     "tslib": ">=1.9.0"
   },
