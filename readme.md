@@ -21,17 +21,12 @@ Renders a simple checkbox component with a button as the main visual element tha
 
 # Change log
 
-0.2.0
-
-- Moved all dependencies to peer-dependencies
-
-  0.1.1
-
-- Performed an accessibility review
-  - Added the ability to pass through aria-\* attributes
-  - Defaulted the role to checkbox
-- Added ability to disable checkbox
-
-  0.1.0
-
-- Initial relase
+- 0.2.0
+  - Moved all dependencies to peer-dependencies
+- 0.1.1
+  - Performed an accessibility review
+    - Added the ability to pass through aria-\* attributes
+    - Defaulted the role to checkbox
+  - Added ability to disable checkbox
+- 0.1.0
+  - Initial relase
