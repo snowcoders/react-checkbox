@@ -66,13 +66,13 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxState> {
       <div className={className}>
         <label className="content">
           <UnstyledButton
+            aria-checked={
+              this.props["aria-checked"] || checked || this.state.isChecked
+            }
             className="visual"
             disabled={disabled}
             onClick={this.onButtonClick}
             role={role || "checkbox"}
-            aria-checked={
-              this.props["aria-checked"] || checked || this.state.isChecked
-            }
             {...otherButtonProps}
             type={undefined}
             value={undefined}
@@ -82,8 +82,8 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxState> {
           <input
             checked={checked}
             className="data"
-            disabled={disabled}
             defaultChecked={defaultChecked}
+            disabled={disabled}
             onChange={this.onInputChange}
             ref={this.setInputRef}
             type="checkbox"
@@ -99,6 +99,7 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxState> {
   };
 
   onButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
     this.inputRef.click();
   };
 
