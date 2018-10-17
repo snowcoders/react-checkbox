@@ -21,6 +21,8 @@ Renders a simple checkbox component with a button as the main visual element tha
 
 # Change log
 
+- 1.0.0
+  - Public release!
 - 0.2.0
   - Moved all dependencies to peer-dependencies
 - 0.1.1
