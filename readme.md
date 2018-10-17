@@ -23,6 +23,7 @@ Renders a simple checkbox component with a button as the main visual element tha
 
 - 1.0.0
   - Public release!
+  - Moved to a webpack build
 - 0.2.0
   - Moved all dependencies to peer-dependencies
 - 0.1.1
