@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@snowcoders/react-unstyled-button": "1.2.2",
-    "@snowcoders/sortier": "2.1.14",
+    "@snowcoders/sortier": "2.2.0",
     "@types/chai": "4.1.7",
     "@types/classnames": "2.2.6",
     "@types/enzyme": "3.1.15",
