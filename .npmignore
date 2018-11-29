@@ -4,5 +4,4 @@ coverage/**
 .gitignore
 .mocha
 .npmignore
-package-lock.json
 tsconfig.json

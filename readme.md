@@ -18,18 +18,3 @@ You can also view all the components on our demo site https://snowcoders.github.
 # This component
 
 Renders a simple checkbox component with a button as the main visual element that triggers a checkbox element. This allows for greater css customizations while maintaining the same API as a checkbox.
-
-# Change log
-
-- 1.0.0
-  - Public release!
-  - Moved to a webpack build
-- 0.2.0
-  - Moved all dependencies to peer-dependencies
-- 0.1.1
-  - Performed an accessibility review
-    - Added the ability to pass through aria-\* attributes
-    - Defaulted the role to checkbox
-  - Added ability to disable checkbox
-- 0.1.0
-  - Initial relase

@@ -18,6 +18,8 @@ export interface ICheckboxProps
   isBaseStylesDisabled?: boolean;
   /** The text that appears next to the checkbox */
   labelText?: string;
+  /** Props that will be applied to the element that triggers the onChange event */
+  eventElementProps?: { [key: string]: any };
   /** Called whenever the checkbox is changed */
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -48,6 +50,7 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxState> {
       className,
       defaultChecked,
       disabled,
+      eventElementProps,
       isBaseStylesDisabled,
       labelText,
       onChange,
@@ -80,6 +83,7 @@ export class Checkbox extends React.Component<ICheckboxProps, ICheckboxState> {
             {checkboxContent}
           </UnstyledButton>
           <input
+            {...eventElementProps}
             checked={checked}
             className="data"
             defaultChecked={defaultChecked}
