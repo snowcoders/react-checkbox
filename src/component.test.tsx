@@ -244,6 +244,18 @@ describe("Checkbox", () => {
     });
   });
 
+  it("Applies event element props to the currentTarget element", () => {
+    defaultProps.eventElementProps = {
+      ["data-value"]: 5
+    };
+    defaultProps.onChange = () => {};
+    let onChangeSpy = spy(defaultProps, "onChange");
+    let wrapper = shallow(<Checkbox {...defaultProps} />);
+    let data = wrapper.find(".data");
+
+    expect(data.props()["data-value"]).to.equal(5);
+  });
+
   it("Sets button type to undefined even if passed in a type", () => {
     defaultProps.type = "button";
     let wrapper = shallow(<Checkbox {...defaultProps} />);
