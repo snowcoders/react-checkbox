@@ -41,7 +41,7 @@
     "@types/sinon": "5.0.7",
     "chai": "4.2.0",
     "classnames": "2.2.6",
-    "enzyme": "3.7.0",
+    "enzyme": "3.8.0",
     "enzyme-adapter-react-16": "1.7.0",
     "husky": "1.2.0",
     "jsdom": "13.0.0",
