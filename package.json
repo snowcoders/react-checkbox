@@ -74,7 +74,7 @@
     "tsconfig-paths": "3.8.0",
     "tslib": "1.10.0",
     "typescript": "3.5.2",
-    "webpack": "4.35.2",
+    "webpack": "4.35.3",
     "webpack-command": "0.4.2"
   }
 }
