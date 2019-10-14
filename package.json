@@ -65,7 +65,7 @@
     "prettier": "1.18.2",
     "react": "16.10.1",
     "react-dom": "16.10.1",
-    "rimraf": "2.7.1",
+    "rimraf": "3.0.0",
     "sinon": "7.5.0",
     "source-map-loader": "0.2.4",
     "source-map-support": "0.5.13",
