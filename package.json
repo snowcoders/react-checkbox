@@ -34,7 +34,7 @@
     "@snowcoders/react-unstyled-button": "1.2.4",
     "@snowcoders/sortier": "3.0.2",
     "@types/chai": "4.2.10",
-    "@types/classnames": "2.2.9",
+    "@types/classnames": "2.2.10",
     "@types/enzyme": "3.10.5",
     "@types/mocha": "7.0.2",
     "@types/react": "16.9.23",
