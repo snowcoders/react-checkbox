@@ -1,3 +1,15 @@
+# Deprecation notice
+
+The majority of what this package did is hide the checkbox and provide a way to add your own styled checkbox. However now that IE 11 is deprecated, the css property [all: unset](https://caniuse.com/css-all) works across enough browsers that it doesn't make sense to maintain this project.
+
+If you want to create your own custom checkbox, there are tons of tutorials that show you how to use `:before` to create your own styled checkbox, however the new update is to just unset all the fields for the input itself that way it doesn't show up.
+
+```css
+input[type=checkbox] {
+  all: unset;
+}
+```
+
 # An unstyled React checkbox
 
 [![npm (scoped)](https://img.shields.io/npm/v/@snowcoders/react-checkbox.svg)](https://www.npmjs.com/package/@snowcoders/react-checkbox)
